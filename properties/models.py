@@ -2,11 +2,8 @@ from django.db import models
 
 # Create your models here.
 
-class  Position(models.Model):
+class Position(models.Model):
         title=models.CharField(max_length=100)
-
-
-
 
         """ Model for the property table """
 class Properties(models.Model):
