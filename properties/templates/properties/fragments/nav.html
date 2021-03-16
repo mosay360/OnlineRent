@@ -31,10 +31,10 @@
               <label class="pb-2" for="city">City</label>
               <select class="form-control form-select form-control-a" id="city">
                 <option>All City</option>
-                <option>Alabama</option>
-                <option>Arizona</option>
-                <option>California</option>
-                <option>Colorado</option>
+                <option>Accra</option>
+                <option>Kumasi</option>
+                <option>Cape Coast</option>
+                <option>Takoradi</option>
               </select>
             </div>
           </div>
@@ -76,11 +76,11 @@
             <div class="form-group mt-3">
               <label class="pb-2" for="price">Min Price</label>
               <select class="form-control form-select form-control-a" id="price">
-                <option>Unlimite</option>
-                <option>$50,000</option>
-                <option>$100,000</option>
-                <option>$150,000</option>
-                <option>$200,000</option>
+                <option>Unlimited</option>
+                <option>GHS 50,000</option>
+                <option>GHS 100,000</option>
+                <option>GHS 150,000</option>
+                <option>GHS 200,000</option>
               </select>
             </div>
           </div>
@@ -106,18 +106,18 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link active" href="{% url 'index' %}">Home</a>
+            <a class="nav-link {% if home %} active {% endif %}" href="{% url 'index' %}">Home</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{% url 'properties:about' %}">About</a>
+            <a class="nav-link {% if about %} active {% endif %}" href="{% url 'properties:about' %}">About</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{% url 'properties:all_properties' %}">Property</a>
+            <a class="nav-link {% if all_properties %} active {% endif %}" href="{% url 'properties:all_properties' %}">Property</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="{% url 'properties:contact' %}">Contact</a>
+            <a class="nav-link {% if contact %} active {% endif %}" href="{% url 'properties:contact' %}">Contact</a>
           </li>
         </ul>
       </div>

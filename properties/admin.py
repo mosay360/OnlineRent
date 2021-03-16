@@ -4,20 +4,25 @@ from .models import *
 
 @admin.register(Properties)
 class PropertiesAdmin(admin.ModelAdmin):
+    list_display = ['owner', 'location', 'property_type', 'property_lease']
+
+
+@admin.register(Position)
+class PositionAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Corddinate)
-class CorddinateAdmin(admin.ModelAdmin):
+@admin.register(Coordinates)
+class CoordinatesAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Property_Desc)
-class PropertyDescAdmin(admin.ModelAdmin):
+@admin.register(PropertyDescription)
+class PropertyDescriptionAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(Payment_Details)
+@admin.register(PaymentDetails)
 class PaymentDetailsAdmin(admin.ModelAdmin):
     pass
 
